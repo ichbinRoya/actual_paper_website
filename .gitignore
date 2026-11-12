@@ -1,0 +1,41 @@
+
+# Original .gitignore contributed by OpenAI ChatGPT,
+# GPT-6, default ChatGPT configuration.
+
+# Quarto
+.quarto/
+_site/
+_freeze/
+*_files/
+*.quarto_ipynb
+
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.virtual_documents/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# Editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+*~

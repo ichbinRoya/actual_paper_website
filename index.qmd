@@ -1,0 +1,90 @@
+---
+title: "The 5 setence paper for Psych 750"
+date: 2008-02-29
+author:
+  - name: Roya Naamipouran
+abstract: > 
+  The characteristic theme of the works of Stone is 
+  the bridge between culture and society. ...
+keywords:
+  - Metaphysics
+  - String Theory
+bibliography: refs.bib
+---
+
+# Introduction
+
+This study invistages the 150 flower types.  
+
+# Literature Review
+
+
+Your text goes here.
+
+# Methods
+Our research question is if the patal width correlates with petal length. we have to columns of continuos data which measures in millimeters. we will use simple correlation analysis and also scatter plot, tehse 2 methods are classic and traditional starting points when evaluating data like this.
+
+
+# Results
+using the classical simple pearson correalation we approch these data.there is a very positive correlation between the width and length of paddel of flowers (.96).
+```{python}
+import pandas as pd
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset('iris')
+print(df.sample(3))
+# Correlation between petal length and petal width
+r = df['petal_length'].corr(df['petal_width'])
+print(f"Correlation (r) between petal length and petal width: {r:.2f}")
+
+# Scatterplot
+sns.scatterplot(data=df, x='petal_length', y='petal_width')
+
+#heatmap
+sns.heatmap(df.groupby('species').mean(), annot=True, cmap='YlGnBu')
+plt.title("Average Measurements by Species")
+plt.show()
+
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from itertools import combinations
+
+sns.set_theme(style="white")
+df = sns.load_dataset('iris')
+
+# All 6 pairs of the 4 measurements
+pairs = list(combinations(['sepal_length', 'sepal_width',
+                           'petal_length', 'petal_width'], 2))
+
+# Set up the matplotlib figure
+f, axes = plt.subplots(2, 3, figsize=(12, 8))
+
+# Rotate the starting point around the cubehelix hue circle
+for ax, (x_col, y_col), s in zip(axes.flat, pairs, np.linspace(0, 3, 6)):
+
+    # Create a cubehelix colormap to use with kdeplot
+    cmap = sns.cubehelix_palette(start=s, light=1, as_cmap=True)
+
+    # Plot the density of this pair of measurements
+    sns.kdeplot(
+        data=df, x=x_col, y=y_col,
+        cmap=cmap, fill=True,
+        thresh=0, levels=15,
+        ax=ax,
+    )
+    ax.set_title(f"{x_col} vs. {y_col}")
+
+f.tight_layout()
+plt.show()
+```
+
+# Discussion
+we conclude that the relationship is ... 
+
+# References
+
+::: {#refs}
+:::
