@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The 5 setence paper for Psych 750",
+    "section": "",
+    "text": "Introduction\nUniversity of Wisconsin_madison has been investigating if bookcover color has any impact on the genre (Tavakkalovich et al. 2026).\n\n\nLiterature Review\nYour text goes here.\n\n\nMethods\n\nimport pandas as pd\nimport seaborn as sns\n\ndomain = \"https://raw.githubusercontent.com/\"\npath = \"adamrossnelson/confident/refs/heads/main/data/\"\nfile = \"confident_fictional_books.csv\"\n\n\n\nResults\nResults show that …\n\n\nDiscussion\nBook genre and color …\n\n\nReferences\n\n\nTavakkalovich, Ismoilov Dilmurod et al. 2026. “METHODS FOR TESTING AND EVALUATING ARTIFICIAL LIGHTING PARAMETERS IN ROOMS.” BG Pulse Journal 2 (10): 306–9."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
