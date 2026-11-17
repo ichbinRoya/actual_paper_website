@@ -26,7 +26,7 @@ Our research question is if the patal width correlates with petal length. we hav
 
 
 # Results
-using the classical simple pearson correalation we approch these data.there is a very positive correlation between the width and length of paddel of flowers (.96).
+using the classical simple pearson correalation we approch these data.there is a very positive correlation between the width and length of petal of flowers (.96).
 ```{python}
 import pandas as pd
 import seaborn as sns
